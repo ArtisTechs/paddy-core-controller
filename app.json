@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "paddy-core-controller",
+    "name": "Paddy Core Controller",
     "slug": "paddy-core-controller",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/paddy-core-logo.png",
     "scheme": "paddycorecontroller",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
