@@ -189,6 +189,19 @@ class PaddyCoreApi {
     this.cameraStreaming = false;
     this.send({ type: "camera", cmd: "STOP" });
   }
+
+  sendHornTimerSet(minutes: number) {
+    this.send({
+      type: "horn_timer_set",
+      minutes,
+    });
+  }
+
+  sendHornTimerClear() {
+    this.send({
+      type: "horn_timer_clear",
+    });
+  }
 }
 
 export default new PaddyCoreApi();
