@@ -68,17 +68,9 @@ export default function HomeScreen() {
     return () => clearInterval(interval);
   }, [isConnected]);
 
-  const batIcon =
-    batteryLevel <= 10
-      ? "battery-empty"
-      : batteryLevel < 40
-      ? "battery-quarter"
-      : batteryLevel < 70
-      ? "battery-half"
-      : "battery-full";
+  const batIcon = "battery-full";
 
-  const batColor =
-    batteryLevel <= 10 ? "#e74c3c" : batteryLevel < 40 ? "#f1c40f" : "#2ecc71";
+  const batColor = "#2ecc71";
 
   return (
     <ScrollView contentContainerStyle={styles.screen}>
@@ -107,9 +99,6 @@ export default function HomeScreen() {
           <ThemedText style={styles.statusLabel}>Battery</ThemedText>
           <View style={styles.statusRight}>
             <FontAwesome name={batIcon} size={18} color={batColor} />
-            <ThemedText style={[styles.statusValue, { marginLeft: 6 }]}>
-              {batteryLevel}%
-            </ThemedText>
           </View>
         </View>
       </ThemedView>
